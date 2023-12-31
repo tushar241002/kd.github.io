@@ -250,7 +250,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #111111;
+  color: #ffffff;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -279,7 +279,7 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   transition: 0.3s;
   z-index: 999;
 }
@@ -307,7 +307,7 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #111111;
+  color: #ffffff;
 }
 
 .navbar-mobile a:hover,
@@ -1536,6 +1536,41 @@ body {
 }
 
 /* Existing CSS... */
+
+/* Add this media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .desktop-5-NLB {
+    padding: 5rem 2rem; /* Adjust padding as needed */
+    height: auto;
+  }
+
+  .desktop-5-NLB .frame-Jt3 {
+    height: auto;
+  }
+
+  .desktop-5-NLB .frame-Jt3 .frame-453-yMu .weve-crafted-our-own-digital-alphabet-setting-us-apart-in-a-world-of-zeros-and-ones-5vj {
+    font-size: 2rem; /* Adjust font size as needed */
+    max-width: 100%;
+  }
+
+  .desktop-5-NLB .frame-Jt3 .frame-453-yMu .frame-452-J2o .auto-group-rjrv-Rt7,
+  .desktop-5-NLB .frame-Jt3 .frame-453-yMu .frame-452-J2o .auto-group-rb2b-shV {
+    margin-bottom: 3rem; /* Adjust margin as needed */
+    height: auto;
+  }
+
+  .desktop-5-NLB .frame-Jt3 .frame-453-yMu .frame-452-J2o .auto-group-rjrv-Rt7 .frame-445-9JK,
+  .desktop-5-NLB .frame-Jt3 .frame-453-yMu .frame-452-J2o .auto-group-rjrv-Rt7 .frame-447-5NK,
+  .desktop-5-NLB .frame-Jt3 .frame-453-yMu .frame-452-J2o .auto-group-rb2b-shV .frame-449-RU7,
+  .desktop-5-NLB .frame-Jt3 .frame-453-yMu .frame-452-J2o .auto-group-rb2b-shV .frame-451-Hej {
+    margin-right: 0;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 2rem; /* Adjust padding as needed */
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  }
+}
 
 
 

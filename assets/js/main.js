@@ -7,7 +7,6 @@
 */
 (function() {
   "use strict";
-
   /**
    * Easy selector helper function
    */
@@ -159,40 +158,32 @@
     }
   });
   /**
-   * Clients Slider
-   */
-  new Swiper('.clients-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 40
-      },
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 60
-      },
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 80
-      },
-      992: {
-        slidesPerView: 6,
-        spaceBetween: 120
-      }
-    }
+  <!-- Add this script for automatic slider -->
+<script>
+  // Function to start the automatic slider
+  function startSlider() {
+    // Set the interval for changing the images (in milliseconds)
+    setInterval(function () {
+      // Calculate the width of one client logo/image
+      var clientWidth = $(".clients-wrapper .client").outerWidth(true);
+
+      // Move the wrapper to the left (slide to the next image)
+      $(".clients-wrapper").css("transform", "translateX(-" + clientWidth + "px)");
+
+      // After the animation duration, move the first client logo/image to the end of the list
+      setTimeout(function () {
+        $(".clients-wrapper .client:first").appendTo(".clients-wrapper");
+        $(".clients-wrapper").css("transform", "translateX(0)");
+      }, 500); // Change the duration as needed (here, it's set to 500 milliseconds)
+    }, 3000); // Change the interval as needed (here, it's set to 3000 milliseconds or 3 seconds)
+  }
+
+  // Call the startSlider function when the document is ready
+  $(document).ready(function () {
+    startSlider();
   });
+</script>
+
 
   /**
    * Porfolio isotope and filter
@@ -249,10 +240,12 @@
     }
   });
 
+
+  
   /**
-   * Testimonials slider
+   * Init swiper slider with 1 slide at once in desktop view
    */
-  new Swiper('.testimonials-slider', {
+  new Swiper('.slides-1', {
     speed: 600,
     loop: true,
     autoplay: {
@@ -265,19 +258,11 @@
       type: 'bullets',
       clickable: true
     },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     }
   });
-
 
 
 
@@ -334,7 +319,7 @@ function init() {
     scene = new THREE.Scene();
 
     camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.01, 1000)
-    camera.position.set(0,0,230);
+    camera.position.set(0,0,180);
 
     const directionalLight = new THREE.DirectionalLight("#fff", 2);
     directionalLight.position.set(0, 50, -20);
@@ -513,8 +498,41 @@ function onWindowResize() {
 
 
 
-
-
+   // Get references to Hero, Clients, and About sections
+   const heroSection = select('#hero');
+   const clientsSection = select('#clients');
+   const aboutSection = select('#about');
+ 
+   // Handle scroll event
+   const handleScroll = () => {
+     const scrollPosition = window.scrollY;
+ 
+     // Calculate the position to trigger the Clients section visibility
+     const heroTriggerPosition = heroSection.offsetTop + heroSection.offsetHeight;
+     const clientsTriggerPosition = clientsSection.offsetTop;
+     const aboutTriggerPosition = aboutSection.offsetTop;
+ 
+     // Show/hide Clients section based on scroll position
+     if (scrollPosition >= heroTriggerPosition && scrollPosition < clientsTriggerPosition) {
+       clientsSection.classList.add('clients-visible');
+     } else {
+       clientsSection.classList.remove('clients-visible');
+     }
+ 
+     // Show/hide About section based on scroll position
+     if (scrollPosition >= clientsTriggerPosition && scrollPosition < aboutTriggerPosition) {
+       aboutSection.classList.add('about-visible');
+     } else {
+       aboutSection.classList.remove('about-visible');
+     }
+ 
+     // Call the existing navbarlinksActive function to control Hero section animation
+     navbarlinksActive();
+   };
+ 
+   // Listen for scroll events
+   onscroll(document, handleScroll);
+ 
 
 
 

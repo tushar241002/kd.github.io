@@ -5,6 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
+
+
   <title>KD Consultancy Services</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -31,7 +38,7 @@
   <meta charset="UTF-8">
   <title>CodePen - Space globe - Three.js</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
-
+  
 
   <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
@@ -51,25 +58,48 @@
     <div class="container d-flex align-items-center">
       <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>
 
-      <h1 class="logo me-auto"><a href="index.html"><span></span></a></h1>
+      <h1 class="logo me-auto"><a href="index.html"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto" href="#about">Who we are</a></li>
-          <li><a class="nav-link scrollto" href="#services">What we do</a></li>
+          <li><a href="about.html">Who we are</a></li>
+          <li class="dropdown"><a href="services.html"><span>What we do</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="service-details_tech-consulting.html"><span>Technology Consulting</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="service-details_tech-consulting.html">Cybersecurity Consulting</a></li>
+                  <li><a href="service-details_tech-consulting.html">Enterprise Resource Planning <br>(ERP)</a></li>
+                  <li><a href="service-details_tech-consulting.html">Cloud Computing</a></li>
+                  <li><a href="service-details_tech-consulting.html">Software Development<br> Consulting</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="service-details_staffing.html"><span>Staffing</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="service-details_staffing.html">Permanent Staffing</a></li>
+                  <li><a href="service-details_staffing.html">Contract Staffing</a></li>
+                  <li><a href="service-details_staffing.html">Internship Programs                  </a></li>
+                  <li><a href="service-details_staffing.html">Remote Staffing</a></li>
+                </ul>
+              </li>
+              <li><a href="service-details_corporate training.html">Corporate Training</a></li>
+              <li><a href="service-details_DM-promo.html">Digital Marketing & Promotions</a></li>
+              <li><a href="service-details_web-development.html">Web Development</a></li>
+              <li><a href="service-details_Job-Placements.html">Job Placements</a></li>
+            </ul>
           
-          <li><a class="nav-link scrollto" href="#contact">Work with us</a></li>
+          <li><a  href="contact.html">Work with us</a></li>
+          
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
+      <a href="https://calendly.com/event_types/new/solo" class="get-started-btn scrollto"><b>Get Started</b></a>
     </div>
   </header><!-- End Header -->
 
  <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center position-relative">
+ <section id="hero" class="d-flex align-items-center position-relative hero-section">
   <div id="canvas_container" class="zoom-in-mode"></div>
 
   <script src='https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js'></script>
@@ -80,7 +110,7 @@
   <div class="container position-relative z-index-2 text-container" data-aos="zoom-out" data-aos-delay="100">
     <div class="row">
       <div class="col-xl-6 mx-auto text-center">
-        <h1>Innovative Solutions.<br>Strategic Results</h1>
+        <h1>Innovative Solutions.<br>Strategic Results.</h1>
         
       </div>
     </div>
@@ -95,128 +125,67 @@
 
 
 
+
   <main id="main">
 
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container" data-aos="zoom-in">
+<!-- ======= Clients Section ======= -->
+<section id="clients">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>We've worked with the best!</h2>
+    </div>
+    <div class="clients-container">
+      <div class="clients-wrapper d-flex justify-content-around align-items-center flex-wrap">
+        <div class="client"><img src="assets/img/clients/client-1.png" class="img-fluid" alt="Client 1"></div>
+        <div class="client"><img src="assets/img/clients/client-2.png" class="img-fluid" alt="Client 2"></div>
+        <div class="client"><img src="assets/img/clients/client-3.png" class="img-fluid" alt="Client 3"></div>
+        <div class="client"><img src="assets/img/clients/client-4.png" class="img-fluid" alt="Client 4"></div>
+        <div class="client"><img src="assets/img/clients/client-6.png" class="img-fluid" alt="Client 6"></div>
+        <div class="client"><img src="assets/img/clients/1630533185558.jpeg.jpg" class="img-fluid" alt="Client 7"></div>
 
-        <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Clients Section -->
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row no-gutters">
-          <div class="content col-xl-5 d-flex align-items-stretch">
-            <div class="content">
-              <h3>At KD Consultancy Services, We Are More Than Team – We're Creators of Digital Magic.</h3>
-              
-              <a href="#" class="about-btn"><span>Who we are</span> <i class="bx bx-chevron-right"></i></a>
-            </div>
-          </div>
-          <div class="col-xl-7 d-flex align-items-stretch">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-receipt"></i>
-                  <h4>Pioneering Solutions</h4>
-                  <p>Breaking the Mold, We Pioneer Solutions That Resonate with Tomorrow's Digital Echo.</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bx bx-cube-alt"></i>
-                  <h4>Tech Wizards at Heart</h4>
-                  <p>With Pixels in Our Veins, We're Not Just Tech Experts – We're Digital Wizards Crafting Unparalleled Experiences.</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bx bx-images"></i>
-                  <h4>Innovation Architects</h4>
-                  <p>Innovation is Our Blueprint; We Architect Solutions That Redefine the Norms of Digital Excellence.
-                  </p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bx bx-shield"></i>
-                  <h4>Strategists of Tomorrow</h4>
-                  <p>Beyond Ones and Zeros, We're Strategists Crafting Tomorrow's Success Stories in Every Byte.</p>
-                </div>
-              </div>
-            </div><!-- End .content-->
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-
-
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Your Website</title>
-</head>
-<body>
-
-  <div class="desktop-5-NLB" data-aos="fade-up">
-    <div class="frame-Jt3 fade-in" data-aos="fade-up" data-aos-delay="500">
-      <div class="frame-453-yMu">
-        <div class="weve-crafted-our-own-digital-alphabet-setting-us-apart-in-a-world-of-zeros-and-ones-5vj">
-          <center>We've Crafted Our Own Digital Alphabet, Setting Us Apart in a World of Zeros and Ones.</center>
-          <br/>
-        </div>
-        <div class="frame-452-J2o">
-          <div class="auto-group-rjrv-Rt7" data-aos="fade-up" data-aos-delay="500">
-            <div class="frame-445-9JK">
-              <div class="frame-444-d71">
-                <div class="heading-4-corporis-voluptates-sit-kxK">InnoVista Methodology:</div>
-                <div class="innovation-meets-vista-our-innovista-methodology-unveils-a-panoramic-view-of-digital-excellence-reshaping-tomorrows-landscapes-rEf">Innovation Meets Vista – Our InnoVista Methodology Unveils a Panoramic View of Digital Excellence, Reshaping Tomorrow's Landscapes.</div>
-              </div>
-            </div>
-            <div class="frame-447-5NK" data-aos="fade-up" data-aos-delay="500">
-              <div class="frame-446-PP1">
-                <div class="heading-4-ullamco-laboris-nisi-9NB">Strategic Synergy Engine</div>
-                <div class="fueling-growth-with-synergy-our-strategic-synergy-engine-powers-collaborations-that-propel-your-business-beyond-conventional-boundaries-3iT">Fueling Growth with Synergy – Our Strategic Synergy Engine Powers Collaborations That Propel Your Business Beyond Conventional Boundaries.</div>
-              </div>
-            </div>
-          </div>
-          <div class="auto-group-rb2b-shV" data-aos="fade-up" data-aos-delay="500">
-            <div class="frame-449-RU7">
-              <div class="frame-448-M6s">
-                <div class="heading-4-labore-consequatur-WEf">Cognitive Craftsmanship</div>
-                <div class="crafting-cognitive-journeys-beyond-technology-we-engage-in-cognitive-craftsmanship-elevating-every-interaction-to-an-experience-RcX">Crafting Cognitive Journeys – Beyond Technology, We Engage in Cognitive Craftsmanship, Elevating Every Interaction to an Experience.</div>
-              </div>
-            </div>
-            <div class="frame-451-Hej" data-aos="fade-up" data-aos-delay="500">
-              <div class="frame-450-EK5">
-                <div class="heading-4-beatae-veritatis-Pxf">Pixel Perfect Solutions</div>
-                <div class="beyond-perfection-were-pixel-perfect-our-solutions-reside-in-the-details-unveiling-a-world-of-impeccable-digitalprecision-vBu">Beyond Perfection, We're Pixel Perfect – Our Solutions Reside in the Details, Unveiling a World of Impeccable Digital Precision</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
+</section><!-- End Clients Section -->
 
-</body>
-</html>
+<style>
+  /* Add this CSS for smooth sliding effect */
+  .clients-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Adjust the duration and easing for a smoother effect */
+  }
+
+  .client {
+    flex: 0 0 auto;
+    margin: 0 15px;
+  }
+</style>
+
+<!-- Add this script for automatic slider -->
+<script>
+  // Function to start the automatic slider
+  function startSlider() {
+    // Set the interval for changing the images (in milliseconds)
+    setInterval(function () {
+      // Calculate the width of one client logo/image
+      var clientWidth = $(".clients-wrapper .client").outerWidth(true);
+
+      // Move the wrapper to the left (slide to the next image)
+      $(".clients-wrapper").css("transform", "translateX(-" + clientWidth + "px)");
+
+      // After the animation duration, move the first client logo/image to the end of the list
+      setTimeout(function () {
+        $(".clients-wrapper .client:first").appendTo(".clients-wrapper");
+        $(".clients-wrapper").css("transform", "translateX(0)");
+      }, 500); // Adjust the duration as needed (here, it's set to 500 milliseconds)
+    }, 3000); // Adjust the interval as needed (here, it's set to 3000 milliseconds or 3 seconds)
+  }
+
+  // Call the startSlider function when the document is ready
+  $(document).ready(function () {
+    startSlider();
+  });
+</script>
 
 
 
@@ -224,54 +193,175 @@
 
 
 
+<script>
+  window.embeddedChatbotConfig = {
+  chatbotId: "LSAgX_ttGCXsOLEkv8NFz",
+  domain: "www.chatbase.co"
+  }
+  </script>
+  <script
+  src="https://www.chatbase.co/embed.min.js"
+  chatbotId="LSAgX_ttGCXsOLEkv8NFz"
+  domain="www.chatbase.co"
+  defer>
+  </script>
 
 
 
+
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about section-bg">
+  <div class="container" data-aos="fade-up">
     
+    <!-- Move "At KD Consultancy Services" to the top, center-aligned -->
+    <div class="row no-gutters text-center">
+      <div class="content col-xl-12">
+        <div class="section-title">
+          <h2>At KD Consultancy Services<br>We Are More Than Team – We're Creators of Digital Era.</h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row no-gutters">
+      <div class="col-xl-12 d-flex align-items-stretch">
+        <div class="icon-boxes d-flex flex-column justify-content-center">
+          <div class="row text-center">
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-receipt"></i>
+              <h4>Pioneering Solutions</h4>
+              <p>Breaking the Mold, We Pioneer Solutions That Resonate with Tomorrow's Digital Echo.</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-cube-alt"></i>
+              <h4>Tech Wizards at Heart</h4>
+              <p>With Pixels in Our Veins, We're Not Just Tech Experts – We're Digital Wizards Crafting Unparalleled Experiences.</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-images"></i>
+              <h4>Innovation Architects</h4>
+              <p>Innovation is Our Blueprint; We Architect Solutions That Redefine the Norms of Digital Excellence.</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-shield"></i>
+              <h4>Strategists of Tomorrow</h4>
+              <p>Beyond Ones and Zeros, We're Strategists Crafting Tomorrow's Success Stories in Every Byte.</p>
+            </div>
+          </div>
+        </div><!-- End .content-->
+      </div>
+    </div>
+    
+    <div class="row no-gutters text-center">
+      <div class="content col-xl-12">
+        <a href="about.html" class="get-started-btn"><b>Who we are</b></a>
+      </div>
+    </div>
+    
+  </div>
+</section><!-- End About Section -->
 
+
+        
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>We've Crafted Our Own Digital Alphabet, Setting Us Apart in a World of Zeros and Ones.</h2>
+        </div>
+
+        <div class="row no-gutters text-center" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  
+                  <h3><font size="5px" color="black">InnoVista Methodology</font></h3>
+                  <p><font size="3px">Innovation Meets Vista – Our InnoVista Methodology Unveils a Panoramic View of Digital Excellence, Reshaping Tomorrow's Landscapes.</b></p>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="info-box mt-4">
+                  
+                  <h3><font size="5px" color="black">Strategic Synergy Engine</h3></font>
+                  <p> Fueling Growth with Synergy – Our Strategic Synergy Engine Powers Collaborations That Propel Your Business Beyond Conventional Boundaries.</font></p>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="info-box mt-4">
+                  
+                  <h3><font size="5px" color="black">Cognitive Craftsmanships</h3></font>
+                  <p><font size="3px">Crafting Cognitive Journeys – Beyond Technology, We Engage in Cognitive Craftsmanship, Elevating Every Interaction to an Experience.</font></p>
+                </div>
+                
+              </div>
+              <div class="col-md-12">
+                <div class="info-box mt-4">
+                  
+                  <h3><font size="5px" color="black">Pixel Perfect Solutions</h3></font>
+                  <p><font size="3px">Beyond Perfection, We're Pixel Perfect – Our Solutions Reside in the Details, Unveiling a World of Impeccable Digital Precision.</font></p>
+                </div>
+                
+              </div>
+              
+            </div>
+
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg ">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>What we do</h2>
-          <p>At KD Consultancy Services, We Don't Just Offer Services; We Pioneer Digital Narratives That Ignite Innovation.</p>
         </div>
 
         <div class="row">
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
               <i class="bi bi-brightness-high"></i>
-              <h4><a href="#">Technology Consulting</a></h4>
-              <p>Navigate the ever-evolving tech landscape with our expert consultants. From streamlining operations to implementing cutting-edge solutions, we redefine what's possible in the digital realm.</p>
+              <h4><a href="service-details_tech-consulting.html">Technology Consulting</a></h4>
+              <p>Navigate the ever-evolving tech landscape with our expert consultants. From streamlining operations to implementing cutting-edge solutions, we redefine what's possible in the digital realm. Empower your business for sustained success in the digital era.</p>
             </div>
           </div>
 
           <div class="col-md-6">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <i class="bi bi-briefcase"></i>
-              <h4><a href="#">Staffing</a></h4>
+              <h4><a href="service-details_staffing.html">Staffing</a></h4>
               <p>Discover the perfect fit for your team with our staffing solutions. We go beyond resumes, focusing on culture fit and skill alignment to ensure your workforce is a harmonious blend of talent and cohesion.</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-card-checklist"></i>
-              <h4><a href="#"> Technical Training</a></h4>
-              <p>Elevate your team's capabilities through our technical training programs. From software and hardware to cybersecurity, we empower individuals with the knowledge to thrive in a tech-centric world.</p>
+              <h4><a href="service-details_corporate training.html"> Corporate Training</a></h4>
+              <p>Unlock potential with tailored tech training. Elevate your team's capabilities through our training programs. From software and hardware to cybersecurity, we empower individuals with the knowledge to thrive in a tech-centric world.</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-bar-chart"></i>
-              <h4><a href="#">Digital Marketing & Promotions</a></h4>
+              <h4><a href="service-details_DM-promo.html">Digital Marketing & Promotions</a></h4>
               <p>Forge a digital identity that resonates. Our marketing maestros employ strategies that transcend clicks, turning them into meaningful conversions, ensuring your brand shines in the crowded digital landscape.</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-binoculars"></i>
-              <h4><a href="#">Web Development</a></h4>
+              <h4><a href="service-details_web-development.html">Web Development</a></h4>
               <p>Embark on a digital journey with our web development expertise. From captivating designs to seamless functionality, we craft websites that not only meet but exceed the expectations of today's digital audience.</p>
             </div>
           </div>
@@ -279,111 +369,141 @@
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
               <i class="bi bi-calendar4-week"></i>
-              <h4><a href="#">Job Placements</a></h4>
+              <h4><a href="service-details_Job-Placements.html">Job Placements</a></h4>
               <p>Bridge the gap between talent and opportunities with our job placement services. Whether you're seeking the perfect role or the ideal candidate, our network and expertise make the connection seamless</p>
             </div>
           </div>
         </div>
-
+      
       </div>
+
+
     </section><!-- End Services Section -->
 
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Whispers of Success, Echoes of Trust: What Our Partners Say</p>
-        </div>
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Mr. Sanjeev Kaurav </h3>
-                  <h4>Director, Cloudespacio Software Pvt. Ltd.</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    KD Consultancy Services has been the wind beneath our digital wings. Their innovative solutions have catapulted our software offerings to new heights. The collaboration with KD Consultancy Services is not just business; it's a journey of shared success and limitless possibilities.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
+   <!-- ======= Testimonials Section ======= -->
+   <div class="section-title">
+    <h2>Testimonials</h2>
+    <p>Whispers of Success, Echoes of Trust: What Our Partners Say</p>
+  </div>
+   
+   <section id="testimonials" class="testimonials">
+    <div class="container" data-aos="fade-up">
+      <div class="slides-1 swiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="" />
+              <h3>Mr. Sanjeev Kaurav</h3>
+              <h4>Director, Cloudespacio Software Pvt. Ltd.</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
-            </div><!-- End testimonial item -->
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                KD Consultancy Services has been the wind beneath our digital wings. Their innovative solutions have
+                catapulted our software offerings to new heights. The collaboration with KD Consultancy Services is
+                not just business; it's a journey of shared success and limitless possibilities.
 
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Mr. Yatendra Singh Chauhan </h3>
-                  <h4>Director, Webentic Services Pvt. Ltd.</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    In the digital labyrinth, KD Consultancy Services has been our guiding light. Their strategic insights and technical prowess have transformed our web services landscape. Partnering with them is not just a business move; it's an alliance that we cherish for the innovative journey it has been.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Mr. Mahendra Gupta </h3>
-                  <h4>Director, Arpan Infra Solutions Pvt. Ltd.</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    KD Consultancy Services doesn't just build solutions; they architect success stories. Our infrastructure projects have found unwavering support in their expertise. It's not just a consultancy; it's a partnership founded on reliability and excellence.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Mr. Prakash Choudhary </h3>
-                  <h4>Director, Fexle Services Private Limited</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Working with KD Consultancy Services has been a symphony of collaboration. Their commitment to quality and innovation has been the cornerstone of our shared achievements. It's more than a service provider; it's a journey of mutual growth and unwavering trust.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>Mrs. Bonani Das </h3>
-                  <h4>Director, Techno Expert Solutions Pvt. Ltd.</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    KD Consultancy Services is more than a training ground; it's a launchpad for digital expertise. Their training programs have equipped our team with the skills to navigate the complex tech terrain. It's not just consultancy; it's an investment in the future of technology.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="" />
+              <h3>Mr. Yatendra Singh Chauhan </h3>
+              <h4>Director, Webentic Services Pvt. Ltd.</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                In the digital labyrinth, KD Consultancy Services has been our guiding light. Their strategic insights
+                and technical prowess have transformed our web services landscape. Partnering with them is not just a
+                business move; it's an alliance that we cherish for the innovative journey it has been.
+
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+          <!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-3.png" class="testimonial-img" alt="" />
+              <h3>Mr. Mahendra Gupta </h3>
+              <h4>Director, Arpan Infra Solutions Pvt. Ltd.</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                KD Consultancy Services doesn't just build solutions; they architect success stories. Our
+                infrastructure projects have found unwavering support in their expertise. It's not just a consultancy;
+                it's a partnership founded on reliability and excellence.
+
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+          <!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="" />
+              <h3>Mr. Prakash Choudhary </h3>
+              <h4>Director, Fexle Services Private Limited</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                Working with KD Consultancy Services has been a symphony of collaboration. Their commitment to quality
+                and innovation has been the cornerstone of our shared achievements. It's more than a service provider;
+                it's a journey of mutual growth and unwavering trust.
+
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+          <!-- End testimonial item -->
+
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="" />
+              <h3>Mrs. Bonani Das </h3>
+              <h4>Director, Techno Expert Solutions Pvt. Ltd.</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                KD Consultancy Services is more than a training ground; it's a launchpad for digital expertise. Their
+                training programs have equipped our team with the skills to navigate the complex tech terrain. It's
+                not just consultancy; it's an investment in the future of technology.
+
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+          <!-- End testimonial item -->
         </div>
-
+        <div class="swiper-pagination"></div>
       </div>
-    </section><!-- End Testimonials Section -->
+    </div>
+  </section>
+  <!-- End Testimonials Section -->
 
-
-    <!-- ======= Team Section ======= -->
+<!-- ======= Team Section ======= -->
 <section id="team" class="team section-bg">
   <div class="container" data-aos="fade-up">
 
@@ -392,16 +512,16 @@
       <p>Meet the Mavericks Behind KD Consultancy Services</p>
     </div>
 
+
     <div class="row justify-content-center"><!-- Updated: Added 'justify-content-center' class -->
       <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
         <div class="member" data-aos="fade-up" data-aos-delay="100">
           <div class="member-img">
             <img src="assets/img/team/team-1.png" class="img-fluid" alt="">
             <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href="https://twitter.com/Kartik_Das2003?t=AMgiKwfQln6o_Yl-IstRMA&s=08"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.instagram.com/_.kartik_das._?igsh=MWh3d2h0dTBncmE1cA=="><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/kartik-das?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
           <div class="member-info">
@@ -416,10 +536,9 @@
           <div class="member-img">
             <img src="assets/img/team/team-2.png" class="img-fluid" alt="">
             <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
+              
+              <a href="https://www.instagram.com/tushar.asthana_?igsh=d21heXFuZnU2eWFm&utm_source=qr"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/tushar-asthana2402?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
           <div class="member-info">
@@ -434,10 +553,9 @@
           <div class="member-img">
             <img src="assets/img/team/team-3.png" class="img-fluid" alt="">
             <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
+              
+              <a href="https://www.instagram.com/.ashika_._?igsh=ZjF1eG1mdDNxaDYz"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/ashika-kesarwani-b2559223a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
           <div class="member-info">
@@ -466,21 +584,31 @@
           <div class="col-lg-6">
 
             <div class="row">
-              
+              <div class="col-md-12">
+                <div class="info-box">
+                  
+                  <h3><i>"Success is not just a Goal, <br>It's our commitment"</i></h3>
+                  
+                </div>
+              </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>kdconsultancyservicesofficial@gmail.com<br>Contact@kdconsultancyservices.com</p>
+                  <h3>Email Us</h3><b>
+                  <p><a href="mailto:Contact@kdconsultancyservices.com">Contact@kdconsultancyservices.com</a></b></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-phone-call"></i>
                   <h3>Call Us</h3>
-                  <p>+91 93106 44766<br>011-79665651</p>
+                  <p><b>
+                    <a href="tel:+919310644766">+91 93106 44766</a></b>
+                  </p>
                 </div>
+                
               </div>
+              
             </div>
 
           </div>
@@ -492,11 +620,11 @@
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="col form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Contact" required>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="E-mail" required>
               </div>
               <div class="form-group">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
@@ -516,6 +644,9 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
+
+
+
 
   <!-- ======= Counts Section ======= -->
   <section id="counts" class="counts">
@@ -560,7 +691,25 @@
     </div>
   </section><!-- End Counts Section -->
 
+<!-- Add this script for automatic slider -->
+<script>
+  // Function to start the automatic slider
+  function startSlider() {
+    // Set the interval for changing the images (in milliseconds)
+    setInterval(function () {
+      // Move the first client logo/image to the end of the list
+      $(".clients-wrapper .client:first").appendTo(".clients-wrapper");
+    }, 3000); // Change the interval as needed (here, it's set to 3000 milliseconds or 3 seconds)
+  }
 
+  // Call the startSlider function when the document is ready
+  $(document).ready(function () {
+    startSlider();
+  });
+</script>
+
+
+  
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
@@ -571,8 +720,8 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>KD Consultancy Services<span>.</span></h3>
             
-              <strong>Phone:</strong> +91 93106 44766<br>
-              <strong>Email:</strong> kdconsultancyservicesofficial@gmail.com<br>
+              <br><strong>Phone:</strong> 011-79665651, +91 9310644766<br>
+              <br><strong>Email:</strong> Contact@kdconsultancyservices.com<br>
             </p>
           </div>
 
@@ -633,17 +782,10 @@
       </div>
     </div>
 
-    <!-- New div for company logo -->
-  <div class="company-logo">
-    <img src="assets\img\logo.png" alt="Company Logo">
-  </div>
-
-  <div class="container d-md-flex py-4">
-    <!-- ... Existing content ... -->
+  
   </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>

@@ -137,7 +137,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 70px; /* Increased max-height for the logo image */
+  max-height: 50px; /* Increased max-height for the logo image */
 }
 
 
@@ -251,7 +251,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover > a {
-  color: 94b2e3;
+  color: #94b2e3;
 }
 
 .navbar .dropdown:hover > ul {

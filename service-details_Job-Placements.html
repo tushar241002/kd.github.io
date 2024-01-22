@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Logis Bootstrap Template - Service Details</title>
+    <title>KD - Job Placements</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -20,25 +20,14 @@
       rel="stylesheet"
     />
 
-    <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/fontawesome-free/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+ <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="assets/css/pagemain.css" rel="stylesheet" />
@@ -64,23 +53,13 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="about.html">Who we are</a></li>
-          <li class="dropdown"><a href="#"><span>What we do</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="services.html"><span>What we do</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li class="dropdown"><a href="service-details_tech-consulting.html"><span>Technology Consulting</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="service-details_tech-consulting.html">Cybersecurity Consulting</a></li>
-                  <li><a href="service-details_tech-consulting.html">Enterprise Resource Planning (ERP)</a></li>
-                  <li><a href="service-details_tech-consulting.html">Cloud Computing</a></li>
-                  <li><a href="service-details_tech-consulting.html">Software Development Consulting</a></li>
-                </ul>
+              <li><a href="service-details_tech-consulting.html">Technology Consulting </i></a>
+                
               </li>
-              <li class="dropdown"><a href="service-details_staffing.html"><span>Staffing</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="service-details_staffing.html">Permanent Staffing</a></li>
-                  <li><a href="service-details_staffing.html">Contract Staffing</a></li>
-                  <li><a href="service-details_staffing.html">Internship Programs                  </a></li>
-                  <li><a href="service-details_staffing.html">Remote Staffing</a></li>
-                </ul>
+              <li><a href="service-details_staffing.html">Staffing</i></a>
+                
               </li>
               <li><a href="service-details_corporate training.html">Corporate Training</a></li>
               <li><a href="service-details_DM-promo.html">Digital Marketing & Promotions</a></li>
@@ -94,8 +73,304 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="https://calendly.com/event_types/new/solo" class="get-started-btn scrollto"><b>Get Started</b></a>
+      <a href="https://calendly.com/kdcs-/30min" class="get-started-btn scrollto"><b>Get Started</b></a>
     </div>
+    <style>/*--------------------------------------------------------------
+      # Header
+      --------------------------------------------------------------*/
+      #header {
+        transition: all 0.5s;
+        z-index: 997;
+        padding: 20px 0; /* Adjusted padding for the overall height */
+      }
+      
+      #header.header-scrolled {
+        padding: 12px 0;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 1); /* Change to the desired background color after hero section scroll */
+      }
+      
+      #header.transparent-bg {
+        background: rgba(0, 0, 0, 0); /* Completely transparent background for the hero section */
+        box-shadow: none; /* No box shadow for transparent background */
+      }
+      
+      #header.transparent-bg.header-scrolled {
+        background: rgba(0, 0, 0, 0.9); /* Background becomes black with 90% transparency after hero section */
+      }
+      
+      #header .logo {
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+      }
+      
+      #header .logo a {
+        color: #ffffff;
+      }
+      
+      #header .logo a span {
+        color: #19335c;
+      }
+      
+      #header .logo img {
+        max-height: 50px; /* Increased max-height for the logo image */
+      }
+      
+      
+      
+      /*--------------------------------------------------------------
+      # Get Startet Button
+      --------------------------------------------------------------*/
+      .get-started-btn {
+        margin-left: 30px;
+        background: #19335c;
+        color: #fff;
+        border-radius: 4px;
+        padding: 8px 25px;
+        white-space: nowrap;
+        transition: 0.3s;
+        font-size: 14px;
+        font-weight: 600;
+        display: inline-block;
+      }
+      
+      .get-started-btn:hover {
+        background: #111111;
+        color: #fff;
+      }
+      
+      @media (max-width: 992px) {
+        .get-started-btn {
+          margin: 0 15px 0 0;
+          padding: 6px 18px;
+        }
+      }
+      
+      /*--------------------------------------------------------------
+      # Navigation Menu
+      --------------------------------------------------------------*/
+      /**
+      * Desktop Navigation 
+      */
+      .navbar {
+        padding: 0;
+      }
+      
+      .navbar ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+      }
+      
+      .navbar li {
+        position: relative;
+      }
+      
+      .navbar a,
+      .navbar a:focus {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0 10px 30px;
+        font-family: "Raleway", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        color: #ffffff;
+        white-space: nowrap;
+        transition: 0.3s;
+      }
+      
+      .navbar a i,
+      .navbar a:focus i {
+        font-size: 12px;
+        line-height: 0;
+        margin-left: 5px;
+      }
+      
+      .navbar a:hover,
+      .navbar .active,
+      .navbar .active:focus,
+      .navbar li:hover > a {
+        color: #94b2e3;
+      }
+      
+      .navbar .dropdown ul {
+        display: block;
+        position: absolute;
+        left: 30px;
+        top: calc(100% + 30px);
+        margin: 0;
+        padding: 10px 0;
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        background: #000000;
+        box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+        transition: 0.3s;
+      }
+      
+      .navbar .dropdown ul li {
+        min-width: 200px;
+      }
+      
+      .navbar .dropdown ul a {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+      
+      .navbar .dropdown ul a i {
+        font-size: 12px;
+      }
+      
+      .navbar .dropdown ul a:hover,
+      .navbar .dropdown ul .active:hover,
+      .navbar .dropdown ul li:hover > a {
+        color: #94b2e3;
+      }
+      
+      .navbar .dropdown:hover > ul {
+        opacity: 1;
+        top: 100%;
+        visibility: visible;
+      }
+      
+      .navbar .dropdown .dropdown ul {
+        top: 0;
+        left: calc(100% - 30px);
+        visibility: hidden;
+      }
+      
+      .navbar .dropdown .dropdown:hover > ul {
+        opacity: 1;
+        top: 0;
+        left: 100%;
+        visibility: visible;
+      }
+      
+      @media (max-width: 1366px) {
+        .navbar .dropdown .dropdown ul {
+          left: -90%;
+        }
+      
+        .navbar .dropdown .dropdown:hover > ul {
+          left: -100%;
+        }
+      }
+      
+      /**
+      * Mobile Navigation 
+      */
+      .mobile-nav-toggle {
+        color: #ffffff;
+        font-size: 28px;
+        cursor: pointer;
+        display: none;
+        line-height: 0;
+        transition: 0.5s;
+      }
+      
+      .mobile-nav-toggle.bi-x {
+        color: #ffffff;
+      }
+      
+      @media (max-width: 991px) {
+        .mobile-nav-toggle {
+          display: block;
+        }
+      
+        .navbar ul {
+          display: none;
+        }
+      }
+      
+      .navbar-mobile {
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.9);
+        transition: 0.3s;
+        z-index: 999;
+      }
+      
+      .navbar-mobile .mobile-nav-toggle {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+      }
+      
+      .navbar-mobile ul {
+        display: block;
+        position: absolute;
+        top: 55px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        padding: 10px 0;
+        background-color: #000000;
+        overflow-y: auto;
+        transition: 0.3s;
+      }
+      
+      .navbar-mobile a,
+      .navbar-mobile a:focus {
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #ffffff;
+      }
+      
+      .navbar-mobile a:hover,
+      .navbar-mobile .active,
+      .navbar-mobile li:hover > a {
+        color: #5a89d5;
+      }
+      
+      .navbar-mobile .getstarted,
+      .navbar-mobile .getstarted:focus {
+        margin: 15px;
+      }
+      
+      .navbar-mobile .dropdown ul {
+        position: static;
+        display: none;
+        margin: 10px 20px;
+        padding: 10px 0;
+        z-index: 99;
+        opacity: 1;
+        visibility: visible;
+        background: #000000;
+        box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+      }
+      
+      .navbar-mobile .dropdown ul li {
+        min-width: 200px;
+      }
+      
+      .navbar-mobile .dropdown ul a {
+        padding: 10px 20px;
+      }
+      
+      .navbar-mobile .dropdown ul a i {
+        font-size: 12px;
+      }
+      
+      .navbar-mobile .dropdown ul a:hover,
+      .navbar-mobile .dropdown ul .active:hover,
+      .navbar-mobile .dropdown ul li:hover > a {
+        color: #6083bd;
+      }
+      
+      .navbar-mobile .dropdown > .dropdown-active {
+        display: block;
+      }
+      
+      </style>
   </header><!-- End Header -->
     <!-- End Header -->
     <!-- End Header -->
@@ -366,7 +641,7 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>KD Consultancy Services<span>.</span></h3>
             
-              <br><strong>Phone:</strong> 011-79665651<br>
+              <br><strong>Phone:</strong> 011-79665651, +91 9310644766<br>
               <br><strong>Email:</strong> Contact@kdconsultancyservices.com<br>
             </p>
           </div>
@@ -374,9 +649,9 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Who we are</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">What we do</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Who we are</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="services.html">What we do</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
@@ -385,15 +660,15 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Technology Consulting
+              <li><i class="bx bx-chevron-right"></i> <a href="service-details_tech-consulting.html">Technology Consulting
               </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Staffing </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Technical Training</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Digital Marketing & Promotions
+              <li><i class="bx bx-chevron-right"></i> <a href="service-details_staffing.html">Staffing </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="service-details_corporate training.html">Technical Training</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="service-details_DM-promo.html">Digital Marketing & Promotions
               </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development
+              <li><i class="bx bx-chevron-right"></i> <a href="service-details_web-development.html">Web Development
               </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Job Placements
+              <li><i class="bx bx-chevron-right"></i> <a href="service-details_Job-Placements.html">Job Placements
               </a></li>
             </ul>
           </div>
@@ -428,7 +703,7 @@
       </div>
     </div>
 
-  
+    <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=B32pkM5m2bg6vbQnVPtf4KJIQycLbxxVsZAaa3FmLVwX4rX1Yp1GQexpW6gJ"></script></span>
   </div>
   </footer><!-- End Footer -->
     <!-- End Footer -->
@@ -451,6 +726,6 @@
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="assets/js/pagemain.js"></script>
+    <script src="assets/js/main.js"></script><script src="assets/js/pagemain.js"></script>
   </body>
 </html>
